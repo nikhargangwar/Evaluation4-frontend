@@ -1,0 +1,14 @@
+.loginContainer{
+    display: flex;
+    height: 100vh;
+}
+
+.left-container{
+    width:60%;
+     height: 100vh;
+}
+
+.right-container{
+    width:40%;
+     height: 100vh;
+}

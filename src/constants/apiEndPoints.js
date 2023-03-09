@@ -2,9 +2,10 @@ export const BACKEND_URL = 'http://localhost:4000';
 export const AUTH_URL = 'http://localhost:3000';
 
 export const AUTHENTICATE_USER = () => ({
-  url: `${BACKEND_URL}/api`,
+  url: `${AUTH_URL}/login`,
   method: 'POST',
 });
+
 // export const GET_ALL_EVENTS = () => ({
 //   url: `${BACKEND_URL}/api/events`,
 //   method: 'GET',
