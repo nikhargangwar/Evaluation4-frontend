@@ -27,8 +27,7 @@ export default function Login() {
       .post('http://localhost:3000/login', data)
       .then((res) => {
         const { token } = res.data;
-        console.log(token);
-        localStorage.setItem(token, null);
+        localStorage.setItem('token', token);
         navigate(HOME_ROUTE);
       })
       .catch((err) => {

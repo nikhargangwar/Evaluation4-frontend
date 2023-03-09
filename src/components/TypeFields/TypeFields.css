@@ -1,0 +1,26 @@
+.TypeFields{
+    margin-left: 40px;
+}
+.field-header{
+    height: 80px;
+    color: rgb(77, 77, 77);
+}
+.field-header h1{
+   margin: 0px;
+   margin-top: 30px;
+}
+
+.field-button{
+    height: 50px;
+    
+}
+
+.field-button button{
+    height: 50px;
+    width: 90%;
+    color: rgb(88, 54, 201);
+    border: 1px dashed rgb(88, 54, 201);
+    background-color: rgb(241, 239, 255);
+    border-radius: 10px;
+
+}

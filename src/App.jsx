@@ -5,6 +5,7 @@ import './App.css';
 import Home from './pages/Home';
 import Error from './pages/Error';
 import Login from './pages/Login';
+import ProtectedRoute from './utils/ProtectedRoute/ProtectedRoute';
 
 import { HOME_ROUTE, ERROR_ROUTE, CARD_DETAILS } from './constants/routesPaths';
 // import ERROR_ROUTE from './constants/routesPaths';
@@ -16,7 +17,14 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path={HOME_ROUTE} element={<Home />} />
+        <Route
+          path={HOME_ROUTE}
+          element={
+            // <ProtectedRoute>
+            <Home />
+            // </ProtectedRoute>
+          }
+        />
         {/* <Route path={CARD_DETAILS} element={<CardDetails />} /> */}
         <Route path={ERROR_ROUTE} element={<Error />} />
       </Routes>

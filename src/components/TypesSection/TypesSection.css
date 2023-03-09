@@ -1,0 +1,26 @@
+.header{
+    height: 55px;
+    color: rgb(56, 56, 56);
+}
+
+.header h1{
+    margin-left: 20px;
+    color: rgb(56, 56, 56);
+    font-size: 25px;
+
+} 
+.body-wrapper{
+    display: flex;
+    height: 92vh;
+    width: 100%;
+}
+
+.new-type-container{
+
+    width: 25%;
+    background-color: rgb(209, 217, 226);
+}
+.fields-container{
+    width: 75%;
+    background-color: rgb(217, 217, 249);
+}
