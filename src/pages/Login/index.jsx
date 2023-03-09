@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { ERROR_ROUTE, HOME_ROUTE } from '../../constants/routesPaths';
 import './Login.css';
+import websiteImage from '../../assets/e2e assets code academy/undraw-upload-re-pasx_2023-03-09/undraw-upload-re-pasx@2x.png';
 
 export default function Login() {
   const [email, setEmail] = React.useState('');
@@ -41,11 +42,13 @@ export default function Login() {
     <div className="loginContainer">
       <div className="left-container">
         <div className="website-title">
-          Design APIs fast, <br />
-          Manage Conntent easily
+          <h1>
+            Design APIs fast, <br />
+            Manage Conntent easily
+          </h1>
         </div>
         <div className="website-image">
-          <img src="" alt="" />
+          <img src={websiteImage} alt="" />
         </div>
       </div>
       <div className="right-container">
@@ -62,6 +65,7 @@ export default function Login() {
                 onChange={handleUsernameChange}
               />
             </label>
+            <br />
             <label className="loginPasswordLabel">
               <p>Password</p>
               <input
@@ -71,7 +75,9 @@ export default function Login() {
               />
             </label>
             <br />
-            <input className="loginInput" type="submit" value="Login" />
+            <button type="button">
+              <input className="loginInput" type="submit" value="Login" />
+            </button>
           </form>
         </div>
       </div>
