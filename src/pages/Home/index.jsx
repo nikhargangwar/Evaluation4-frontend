@@ -4,13 +4,14 @@ import CollectionSection from '../../components/CollectionSection';
 import TypesSection from '../../components/TypesSection';
 import makeRequest from '../../utils/makeRequest';
 import { GET_ALL_TYPES } from '../../constants/apiEndPoints';
-
+import EntryContainer from '../../components/EntryContainer';
 import './Home.css';
 
 function Home() {
   const [collections, setCollections] = useState([]);
   const [dummyState, setDummyState] = useState(true);
   const [error, setError] = useState();
+  const [collectionId, setCollectionId] = useState(1);
 
   useEffect(() => {
     makeRequest(GET_ALL_TYPES, {})
@@ -31,7 +32,11 @@ function Home() {
         <CollectionSection allCollections={collections} />
       </div>
       <div className="right-app-container">
-        <TypesSection allTypes={collections} />
+        {collectionId === 0 ? (
+          <TypesSection allTypes={collections} />
+        ) : (
+          <EntryContainer collectionId={collectionId} />
+        )}
       </div>
     </div>
   );

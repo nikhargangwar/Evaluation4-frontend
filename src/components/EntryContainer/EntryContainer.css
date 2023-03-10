@@ -1,0 +1,36 @@
+.header{
+    height: 55px;
+    color: rgb(195, 40, 40) !important;
+     
+}
+
+.header h1{
+    margin-left: 20px;
+    color: rgb(56, 56, 56);
+    font-size: 25px;
+
+} 
+
+.main-body-container{
+    width: 90%;
+    margin: 0 auto;
+}
+.entry-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    color: rgb(56, 56, 56);
+    background-color: rgb(209, 217, 226);
+}
+
+.entry-field-heading{
+    display: flex;
+    margin-left: 40px;
+}
+.entry-heading-text{
+    font-size: 10px;
+    width: 200px;
+    font-weight: 300 !important;
+    color: rgb(85, 84, 84);
+}

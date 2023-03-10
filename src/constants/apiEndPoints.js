@@ -21,6 +21,11 @@ export const ADD_FIELD = {
   method: 'POST',
 };
 
+export const GET_ALL_ENTRIES = {
+  url: `${BACKEND_URL}/entry`,
+  method: 'POST',
+};
+
 // export const GET_ALL_EVENTS = () => ({
 //   url: `${BACKEND_URL}/api/events`,
 //   method: 'GET',
