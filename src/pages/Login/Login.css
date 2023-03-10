@@ -30,14 +30,17 @@
 
 .form-heading{
     height: 20vh;
-   
 }
 
 
-.form-heading h2{
-  margin-top: 110px;
-   margin-left: 80px; 
+.form-heading div{
+    margin-top: 200px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+
 
 .form{
     width: 100%;

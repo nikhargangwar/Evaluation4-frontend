@@ -1,11 +1,11 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './CollectionSection.css';
 import CollectionButton from '../CollectionButton';
 
-function CollectionSection() {
-  const [collections, setCollections] = useState([1, 2, 3, 4, 5]);
+function CollectionSection({ allCollections }) {
   return (
     <div className="CollectionSection">
       <div className="collection-section-header">
@@ -15,8 +15,14 @@ function CollectionSection() {
         <h3>COLLECTION TYPES</h3>
       </div>
       <div className="collection-section-content">
-        {collections.map((collection) => {
-          return <CollectionButton />;
+        {allCollections.map((collection, id) => {
+          return (
+            <CollectionButton
+              id={id}
+              key={collection.id}
+              name={collection.name}
+            />
+          );
         })}
       </div>
     </div>

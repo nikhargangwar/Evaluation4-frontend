@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import NewTypes from '../NewTypes';
 import TypeFields from '../TypeFields';
@@ -7,7 +8,7 @@ import TypeFields from '../TypeFields';
 
 import './TypesSection.css';
 
-function TypesSection() {
+function TypesSection({ allTypes }) {
   return (
     <div className="TypesSection">
       <div className="header">
@@ -15,7 +16,7 @@ function TypesSection() {
       </div>
       <div className="body-wrapper">
         <div className="new-type-container">
-          <NewTypes />
+          <NewTypes allTypes={allTypes} />
         </div>
         <div className="fields-container">
           <TypeFields />

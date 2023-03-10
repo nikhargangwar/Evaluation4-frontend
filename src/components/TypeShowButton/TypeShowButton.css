@@ -3,4 +3,14 @@
     background-color: white;
     height: 55px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 20px 0px 0px 0px
+}
+
+.TypeShowButton h3{
+   
+    margin-left: 20px;
+    font-weight: 400;
+    color: rgb(128, 128, 128);
 }

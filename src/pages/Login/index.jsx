@@ -2,7 +2,11 @@
 import React from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { ERROR_ROUTE, HOME_ROUTE } from '../../constants/routesPaths';
+import {
+  ERROR_ROUTE,
+  HOME_ROUTE,
+  INVALID_CREDENTIALS,
+} from '../../constants/routesPaths';
 import './Login.css';
 import websiteImage from '../../assets/e2e assets code academy/undraw-upload-re-pasx_2023-03-09/undraw-upload-re-pasx@2x.png';
 
@@ -26,9 +30,15 @@ export default function Login() {
     axios
       .post('http://localhost:3000/login', data)
       .then((res) => {
-        const { token } = res.data;
-        localStorage.setItem('token', token);
-        navigate(HOME_ROUTE);
+        if (!res.data) {
+          console.log(res.data);
+          navigate(INVALID_CREDENTIALS);
+        } else {
+          const { token } = res.data;
+          localStorage.setItem('token', token);
+          // console.log(token);
+          navigate(HOME_ROUTE);
+        }
       })
       .catch((err) => {
         navigate(ERROR_ROUTE);
@@ -52,7 +62,9 @@ export default function Login() {
       </div>
       <div className="right-container">
         <div className="form-heading">
-          <h2>Login to you CMS+ account</h2>
+          <div>
+            <h2>Login to you CMS+ account</h2>
+          </div>
         </div>
         <div className="form">
           <form className="loginForm" onSubmit={handleSubmit}>

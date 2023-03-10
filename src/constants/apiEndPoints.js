@@ -1,10 +1,15 @@
-export const BACKEND_URL = 'http://localhost:4000';
+export const BACKEND_URL = 'http://localhost:4000/api';
 export const AUTH_URL = 'http://localhost:3000';
 
-export const AUTHENTICATE_USER = () => ({
-  url: `${AUTH_URL}/login`,
+export const GET_ALL_TYPES = {
+  url: `${BACKEND_URL}/type`,
+  method: 'GET',
+};
+
+export const CREATE_TYPE = {
+  url: `${BACKEND_URL}/type`,
   method: 'POST',
-});
+};
 
 // export const GET_ALL_EVENTS = () => ({
 //   url: `${BACKEND_URL}/api/events`,

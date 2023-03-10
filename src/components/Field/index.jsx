@@ -7,7 +7,12 @@ import './Field.css';
 function Field() {
   return (
     <div className="Field">
-      <h2>name</h2>
+      <div className="left-design">
+        <h3>Ab</h3>
+      </div>
+      <div>
+        <h2>name</h2>
+      </div>
     </div>
   );
 }

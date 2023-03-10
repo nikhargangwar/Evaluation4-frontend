@@ -13,6 +13,8 @@
 
 .collection-section-content{
     color: rgb(142, 142, 142);
+    width: 85%;
+    margin: 0 auto;
 }
 .collection-types{
     color: rgb(203, 203, 203);
