@@ -59,14 +59,14 @@ function TypeFields({ typeSpecificId }) {
         <div className="left-design">
           <h3>Ab</h3>
         </div>
-        <div>
+        <div className="input-field">
           <input
             type="text"
             placeholder="Name"
             onChange={(e) => setFieldName(e.target.value)}
           />
         </div>
-        <div>
+        <div className="input-field">
           <input
             type="text"
             placeholder="Type"

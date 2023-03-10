@@ -11,7 +11,7 @@ function Home() {
   const [collections, setCollections] = useState([]);
   const [dummyState, setDummyState] = useState(true);
   const [error, setError] = useState();
-  const [collectionId, setCollectionId] = useState(1);
+  const [collectionId, setCollectionId] = useState(0);
 
   useEffect(() => {
     makeRequest(GET_ALL_TYPES, {})
@@ -22,7 +22,7 @@ function Home() {
         setError(e.message);
       });
   }, []);
-
+  console.log(collectionId);
   return (
     <div className="app">
       <div className="left-app-container">

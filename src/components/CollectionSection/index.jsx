@@ -25,6 +25,11 @@ function CollectionSection({ allCollections, setCollectionId }) {
           );
         })}
       </div>
+      {/* <div className="black-button">
+        <button type="button" onClick={setCollectionId(0)}>
+          <h2>CONTENT TYPE BUILDER</h2>
+        </button>
+      </div> */}
     </div>
   );
 }

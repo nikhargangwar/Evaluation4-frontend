@@ -42,6 +42,12 @@
     width: 60px;
     background-color: rgb(171, 123, 242);
 color: white;
+
+}
+
+.input-field input{
+    border:none;
+    margin-left: 20px;
 }
 
 .left-design h3{

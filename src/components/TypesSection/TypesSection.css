@@ -18,9 +18,9 @@
 .new-type-container{
 
     width: 25%;
-    background-color: rgb(209, 217, 226);
+    background-color: rgba(214, 214, 214, 0);
 }
 .fields-container{
     width: 75%;
-    background-color: rgb(209, 217, 226);
+    background-color: rgb(216, 218, 243);
 }
