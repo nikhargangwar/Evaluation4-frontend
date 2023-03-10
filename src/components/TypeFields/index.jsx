@@ -15,13 +15,11 @@ function TypeFields({ typeSpecificId }) {
   const [fieldName, setFieldName] = useState('');
   const [fieldType, setFieldType] = useState('');
   const [dummyState, setDummyState] = useState(true);
-  console.log(typeSpecificId);
   useEffect(() => {
     makeRequest(GET_FIELDS_BY_ID, {
       data: { typeId: typeSpecificId },
     })
       .then((response) => {
-        console.log(response.data);
         setFields(response.data);
       })
       .catch((e) => {
