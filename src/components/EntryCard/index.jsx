@@ -6,7 +6,7 @@ import './EntryCard.css';
 
 function EntryCard({ fields, entry }) {
   return (
-    <div className="EntryCard">
+    <div className="entry-card-wrapper">
       {fields.map((field) => (
         <div className="entry-card">{entry.data[field]}</div>
       ))}

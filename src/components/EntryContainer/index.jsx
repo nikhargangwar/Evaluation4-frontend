@@ -30,14 +30,12 @@ function EntryContainer({ collectionId }) {
       data: { typeId: collectionId },
     })
       .then((response) => {
-        console.log(response.data);
         setFields(response.data.map((field) => field.fieldName));
       })
       .catch((e) => {
         setError(e.message);
       });
-  }, []);
-  console.log(entryList);
+  }, [collectionId]);
   // const refreshFunction = () => {
   //   setDummyState(!dummyState);
   // };

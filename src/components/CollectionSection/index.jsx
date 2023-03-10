@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import './CollectionSection.css';
 import CollectionButton from '../CollectionButton';
 
-function CollectionSection({ allCollections }) {
+function CollectionSection({ allCollections, setCollectionId }) {
   return (
     <div className="CollectionSection">
       <div className="collection-section-header">
@@ -19,8 +19,8 @@ function CollectionSection({ allCollections }) {
           return (
             <CollectionButton
               id={id}
-              key={collection.id}
-              name={collection.name}
+              collection={collection}
+              setCollectionId={setCollectionId}
             />
           );
         })}

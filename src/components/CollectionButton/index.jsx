@@ -6,10 +6,15 @@ import React, { useState } from 'react';
 
 import './CollectionButton.css';
 
-function CollectionButton({ name }) {
+function CollectionButton({ collection, setCollectionId }) {
+  const onClickHandler = () => {
+    setCollectionId(collection.id);
+  };
   return (
     <div className="CollectionButton">
-      <h4>{name}</h4>
+      <button type="button" onClick={onClickHandler}>
+        <h4>{collection.name}</h4>
+      </button>
     </div>
   );
 }

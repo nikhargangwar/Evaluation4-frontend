@@ -23,13 +23,13 @@ function Home() {
       });
   }, []);
 
-  // const refreshFunction = () => {
-  //   setDummyState(!dummyState);
-  // };
   return (
     <div className="app">
       <div className="left-app-container">
-        <CollectionSection allCollections={collections} />
+        <CollectionSection
+          allCollections={collections}
+          setCollectionId={setCollectionId}
+        />
       </div>
       <div className="right-app-container">
         {collectionId === 0 ? (
