@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState } from 'react';
 import NewTypes from '../NewTypes';
 import TypeFields from '../TypeFields';
 
@@ -9,6 +9,7 @@ import TypeFields from '../TypeFields';
 import './TypesSection.css';
 
 function TypesSection({ allTypes }) {
+  const [typeSpecificId, setTypeSpecificId] = useState(1);
   return (
     <div className="TypesSection">
       <div className="header">
@@ -16,10 +17,10 @@ function TypesSection({ allTypes }) {
       </div>
       <div className="body-wrapper">
         <div className="new-type-container">
-          <NewTypes allTypes={allTypes} />
+          <NewTypes allTypes={allTypes} setTypeSpecificId={setTypeSpecificId} />
         </div>
         <div className="fields-container">
-          <TypeFields />
+          <TypeFields typeSpecificId={typeSpecificId} />
         </div>
       </div>
     </div>

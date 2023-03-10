@@ -4,9 +4,10 @@ import React, { useState, useEffect } from 'react';
 import { CREATE_TYPE } from '../../constants/apiEndPoints';
 import TypeShowButton from '../TypeShowButton';
 import makeRequest from '../../utils/makeRequest';
+
 import './NewTypes.css';
 
-function NewTypes({ allTypes }) {
+function NewTypes({ allTypes, setTypeSpecificId }) {
   // const [types, setTypes] = useState([1, 2, 3, 4]);
   const [showModal, setShowModal] = useState(false);
   // const [inputValue, setInputValue] = useState('');
@@ -24,6 +25,7 @@ function NewTypes({ allTypes }) {
     makeRequest(CREATE_TYPE, {
       data: { name: newType },
     });
+
     setShowModal(false);
   };
   return (
@@ -69,7 +71,14 @@ function NewTypes({ allTypes }) {
         </div>
         <div className="list-of-type-buttons">
           {allTypes.map((type, id) => {
-            return <TypeShowButton id={id} key={type.id} type={type} />;
+            return (
+              <TypeShowButton
+                id={id}
+                key={type.id}
+                type={type}
+                setTypeSpecificId={setTypeSpecificId}
+              />
+            );
           })}
         </div>
       </div>

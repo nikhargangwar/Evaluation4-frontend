@@ -11,6 +11,16 @@ export const CREATE_TYPE = {
   method: 'POST',
 };
 
+export const GET_FIELDS_BY_ID = {
+  url: `${BACKEND_URL}/field`,
+  method: 'POST',
+};
+
+export const ADD_FIELD = {
+  url: `${BACKEND_URL}/field/post`,
+  method: 'POST',
+};
+
 // export const GET_ALL_EVENTS = () => ({
 //   url: `${BACKEND_URL}/api/events`,
 //   method: 'GET',

@@ -9,6 +9,7 @@ import './Home.css';
 
 function Home() {
   const [collections, setCollections] = useState([]);
+  const [dummyState, setDummyState] = useState(true);
   const [error, setError] = useState();
 
   useEffect(() => {
@@ -20,6 +21,10 @@ function Home() {
         setError(e.message);
       });
   }, []);
+
+  // const refreshFunction = () => {
+  //   setDummyState(!dummyState);
+  // };
   return (
     <div className="app">
       <div className="left-app-container">
